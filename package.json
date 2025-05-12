@@ -1,0 +1,24 @@
+{
+  "name": "rulesservices",
+  "version": "1.0.0",
+  "description": "Rule Services for Zeo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eng-Bode2004/Zeo-RuleServices.git"
+  },
+  "author": "Abdelrahman Ashraf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eng-Bode2004/Zeo-RuleServices/issues"
+  },
+  "homepage": "https://github.com/Eng-Bode2004/Zeo-RuleServices#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.14.2"
+  }
+}
