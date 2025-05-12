@@ -49,6 +49,28 @@ class RulesService {
             throw error;
         }
     }
+
+
+    async getRuleName(ruleId) {
+        try {
+
+            if (!ruleId) {
+                return Promise.reject(new Error("Please enter ruleId which is required!"));
+            }
+
+            const rule = await RulesModel.findById(ruleId).select("name");
+            if (!rule) {
+                return Promise.reject(new Error("Rule not found!"));
+            }
+            return rule;
+
+        }
+
+        catch (error) {
+            throw error;
+        }
+    }
+
 }
 
 module.exports = new RulesService();

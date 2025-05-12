@@ -42,6 +42,34 @@ class RulesController {
             })
         }
     }
+
+    async getRuleName(req,res){
+        try {
+
+            const {ruleId} = req.params;
+            if (!ruleId) {
+                res.status(400).json({
+                    success: false,
+                    message: 'Rule Id is required'
+                })
+            }
+
+            const rule = await RuleService.getRuleName(ruleId);
+            res.status(200).json({
+                success: true,
+                RuleName: rule
+            })
+
+
+        }
+
+        catch (error) {
+            res.status(400).json({
+                success: false,
+                message: error.message
+            })
+        }
+    }
 }
 
 module.exports = new RulesController();
